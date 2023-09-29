@@ -26,10 +26,10 @@ def horario_create(request):
     context = {
         'form': form,
     }
-    return render(request, 'Horario/horarioCreate.html', context)
+    return render(request, 'horarioCreate.html', context)
 
 #¿?
 def get_horario(request):
     horario = get_horario()
     context = {'horario':horario}
-    return render(request, 'Horario/horarios.html', context)
+    return render(request, 'horarios.html', context)

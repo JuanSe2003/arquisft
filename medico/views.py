@@ -21,15 +21,15 @@ def medico_create(request):
     context = {
         'form': form,
     }
-    return render(request, 'Medico/medicoCreate.html', context)
+    return render(request, 'medicoCreate.html', context)
 
 def medico_list(request):
     medicos = get_medicos()
     context = {'medicos':medicos}
-    return render(request, 'Medico/medicos.html', context)
+    return render(request, 'medicos.html', context)
 
 #¿?
 def get_medico(request):
     medico = get_medico()
     context = {'medico':medico}
-    return render(request, 'medico/medico_list.html', context)
+    return render(request, 'medico_list.html', context)

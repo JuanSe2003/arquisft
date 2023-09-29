@@ -9,7 +9,7 @@ from .logic.cita_logic import crear_cita, get_citas, get_cita
 def cita_list(request):
     citas = get_citas()
     context = {'citas':citas}
-    return render(request, 'Cita/citas.html', context)
+    return render(request, 'citas.html', context)
 
 def cita_create(request):
     if request.method == 'POST':
@@ -26,13 +26,13 @@ def cita_create(request):
     context = {
         'form': form,
     }
-    return render(request, 'Cita/citaCreate.html', context)
+    return render(request, 'citaCreate.html', context)
 
 #¿?
 def get_cita(request):
     cita = get_cita()
     context = {'cita':cita}
-    return render(request, 'Cita/citas.html', context)
+    return render(request, 'citas.html', context)
 
 
 
