@@ -19,7 +19,7 @@ def horario_create(request):
     if request.method == 'POST':
         var = {'cita':request.POST['cita'],'medico':request.POST['medico'],'date':request.POST['date'],'time':request.POST['time']}
         horario = create_horario(var)
-        messages.success(request, 'Horario creado exitosamente.')
+        messages.success(request, 'horario creado exitosamente.')
         return HttpResponseRedirect(reverse('horario:horario_list'))
     else:
         return render(request, 'horario/horario_create.html')

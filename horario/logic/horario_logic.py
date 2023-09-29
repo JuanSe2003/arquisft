@@ -1,15 +1,15 @@
 from horario.models import Horario
 
 def get_horarios(var_pk):
-    Horario=Horario.objects.all()
-    return Horario
+    horario=Horario.objects.all()
+    return horario
 
 def get_horario(var_pk):
-    Horario=Horario.objects.get(pk=var_pk)
-    return Horario
+    horario=Horario.objects.get(pk=var_pk)
+    return horario
 
 
 def create_horario(var):
-    Horario=Horario(cita=var['cita'],medico=var['medico'],date=var['date'],time=var['time'])
-    Horario.save()
-    return Horario
+    horario=Horario(cita=var['cita'],medico=var['medico'],date=var['date'],time=var['time'])
+    horario.save()
+    return horario
