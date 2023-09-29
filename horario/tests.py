@@ -7,10 +7,12 @@ class HorarioForm(forms.ModelForm):
     class Meta:
         model = Horario
         fields = [
-            'medico',
+            'id',
+            'profesional',
             'date'
         ]
         labels = {
-            'medico': 'Medico',
-            'date': 'Date'
+            'id': 'ID',
+            'profesional': 'Profesional',
+            'date':'Date'
         }
