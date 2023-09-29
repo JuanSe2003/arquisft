@@ -1,4 +1,4 @@
-import medico.models as Medico
+from ..models import Medico
 
 def crear_medico(form):
     medico = form.save()
