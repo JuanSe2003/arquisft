@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .models import Horario
-from .forms import HorarioForm
+from .tests import HorarioForm
 from .logic.horario_logic import create_horario, get_horarios, get_horario
 
 def horario_list(request):

@@ -25,13 +25,15 @@
                     <table class="table table-hover">
                         <thead>
                         <tr style="color:#0E2EB0">
-                            <th>Horarios</th>
+                            <th>Medico Asociado</th>
+                            <th>Horario</th>
                         </tr>
                         </thead>
                         <tbody>
 
-                        {% for horario in horario_list %}
+                        {% for horario in horarios %}
                         <tr>
+                            <td>{{ horario.medico }}</td>
                             <td>{{ horario.date }}</td>
                         </tr>
                         {% endfor %}
