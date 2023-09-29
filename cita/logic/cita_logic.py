@@ -9,3 +9,7 @@ def get_citas():
     Cita=Cita.objects.all()
     return Cita
 
+def get_cita(var_pk):
+    cita=cita.objects.get(pk=var_pk)
+    return cita
+

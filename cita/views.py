@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .models import Cita
-from .logic.cita_logic import crear_cita, get_citas
+from .logic.cita_logic import crear_cita, get_citas, get_cita
 
 def cita_list(request):
     citas = get_citas()
@@ -18,6 +18,11 @@ def cita_create(request):
         return HttpResponseRedirect(reverse('cita:cita_create'))
     else:
         return render(request, 'Cita/cita_create.html')
+    
+def get_cita(request):
+    cita = get_cita()
+    context = {'cita':cita}
+    return render(request, 'cita/cita_list.html', context)
 
 
 
