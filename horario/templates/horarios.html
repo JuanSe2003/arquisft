@@ -25,6 +25,7 @@
                     <table class="table table-hover">
                         <thead>
                         <tr style="color:#0E2EB0">
+                            <th>ID horario</th>
                             <th>Medico Asociado</th>
                             <th>Horario</th>
                         </tr>
@@ -33,6 +34,7 @@
 
                         {% for horario in horarios %}
                         <tr>
+                            <td>{{ horario.id }}</td>
                             <td>{{ horario.medico }}</td>
                             <td>{{ horario.date }}</td>
                         </tr>
