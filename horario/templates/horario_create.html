@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <br>
+    <h1 class="text-center">Create Horario</h1>
+    <button type="submit" class="btn btn-success waves-effect waves-light">Create</button>
+    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                onClick=" window.location.href='/Horario' ">Back
+    </button>
+</form>
+{% endblock %}

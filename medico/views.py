@@ -10,7 +10,7 @@ def create_medico(request):
         var = {'nombre':request.POST['nombre'],'apellido':request.POST['apellido'],'especialidad':request.POST['especialidad'],'telefono':request.POST['telefono'],'email':request.POST['email']}
         medico = crear_medico(var)
         messages.success(request, 'Medico creado exitosamente.')
-        return HttpResponseRedirect(reverse('medico:medico_list'))
+        return HttpResponseRedirect(reverse('medico:medico_create'))
     else:
-        return render(request, 'medico/medico_create.html')
+        return render(request, 'Medico/medico_create.html')
 
