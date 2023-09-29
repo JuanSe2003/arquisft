@@ -1,14 +1,15 @@
 from ..models import Cita
 
-def crear_cita(var):
-    cita=Cita(medico=var['medico'],date=var['date'],time=var['time'],nombre=var['nombre'],apellido=var['apellido'])
+def crear_cita(form):
+    cita = form.save()
     cita.save()
-    return cita
+    return ()
 
 def get_citas():
     cita=Cita.objects.all()
     return cita
 
+#¿sobra?
 def get_cita(var_pk):
     cita=Cita.objects.get(pk=var_pk)
     return cita
