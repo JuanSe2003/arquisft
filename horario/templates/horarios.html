@@ -26,8 +26,6 @@
                         <thead>
                         <tr style="color:#0E2EB0">
                             <th>ID horario</th>
-                            <th>Medico Asociado</th>
-                            <th>Horario</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -35,8 +33,6 @@
                         {% for horario in horarios %}
                         <tr>
                             <td>{{ horario.id }}</td>
-                            <td>{{ horario.profesional }}</td>
-                            <td>{{ horario.date }}</td>
                         </tr>
                         {% endfor %}
 
