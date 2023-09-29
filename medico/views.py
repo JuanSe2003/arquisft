@@ -3,14 +3,14 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .models import Medico
-from .forms import MedicoForm
+from .tests import MedicoForm
 from .logic.medico_logic import crear_medico, get_medico, get_medicos
 
 def medico_create(request):
     if request.method == 'POST':
         form = MedicoForm(request.POST)
         if form.is_valid():
-            medico_create(form)
+            crear_medico(form)
             messages.add_message(request, messages.SUCCESS, 'Successfully created medico')
             return HttpResponseRedirect(reverse('medicoCreate'))
         else:
