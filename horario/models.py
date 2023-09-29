@@ -6,4 +6,4 @@ class Horario(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        return {'cita':self.cita,'medico':self.medico}
+        return {'medico':self.medico,'date':self.date}
