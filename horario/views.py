@@ -9,7 +9,7 @@ from .logic.horario_logic import create_horario, get_horarios, get_horario
 def horario_list(request):
     horarios = get_horarios()
     context = {'horarios':horarios}
-    return render(request, 'Horario/horarios.html', context)
+    return render(request, 'horarios.html', context)
 
 def horario_create(request):
     if request.method == 'POST':

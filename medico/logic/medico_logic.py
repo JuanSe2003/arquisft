@@ -6,7 +6,7 @@ def crear_medico(form):
     return ()
 
 def get_medicos():
-    medico=Medico.objets.all()
+    medico=Medico.objects.all()
     return medico
 
 #¿?
