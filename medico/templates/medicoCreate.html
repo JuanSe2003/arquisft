@@ -4,15 +4,11 @@
     {% csrf_token %}
     <br>
     <h1 class="text-center">Create Medico</h1>
-    <button type="submit" class="btn btn-success waves-effect waves-light" onclick="process()">Create</button>
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success waves-effect waves-light">Create</button>
     <button type="button" class="btn btn-primary waves-effect waves-light"
                                 onClick=" window.location.href='/medicos' ">Back
     </button>
-    <script type="javascript" type="text/javascript">
-        function process()
-        {
-            log(0)
-        }
-    </script>
+
 </form>
 {% endblock %}
