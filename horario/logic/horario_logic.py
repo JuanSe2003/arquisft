@@ -13,6 +13,6 @@ def get_horario(var_pk):
 ### crea una funcion que 
 def create_horario(form):
     horario = form.save()
-    horario.profesional=Medico.objects.get(id=3)
+    horario.profesional_id = 3
     horario.save()
     return ()
