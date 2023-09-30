@@ -6,6 +6,6 @@ class Medico(models.Model):
     last_name = models.CharField(max_length=50)
     
     def __str__(self):
-        return f'ID: {self.id}, Name: {self.name}, Last Name: {self.last_name}'
+        return f'{self.name} {self.last_name}'
 
     

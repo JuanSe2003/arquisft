@@ -8,4 +8,4 @@ class Horario(models.Model):
     hora = models.IntegerField(default=0)
 
     def __str__(self):
-        return f'ID: {self.id}, hora:{self.hora}'
+        return f'{self.hora}'
