@@ -8,7 +8,7 @@ class HorarioForm(forms.ModelForm):
         model = Horario
         fields = [
             'id',
-            'profesional'
+            'profesional',
             'date'
         ]
         labels = {
