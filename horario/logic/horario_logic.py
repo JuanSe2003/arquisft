@@ -1,6 +1,6 @@
 from horario.models import Horario
 from medico.models import Medico 
-from medico.logic.medico_logic import crear_medico
+from medico.logic.medico_logic import get_medico
 
 def get_horarios():
     horario=Horario.objects.all()
@@ -14,6 +14,7 @@ def get_horario(var_pk):
 ### crea una funcion que 
 def create_horario(form):
     horario = form.save()
-    horario.profesional= 3
+    doctores = get_medico(3)
+    horario.profesional = doctores
     horario.save()
     return ()
