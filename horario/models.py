@@ -7,4 +7,4 @@ class Horario(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        return {'id':self.id,'date':self.date}
+        return f'ID: {self.id}, Date: {self.date}'
