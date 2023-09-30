@@ -25,14 +25,24 @@
                     <table class="table table-hover">
                         <thead>
                         <tr style="color:#0E2EB0">
-                            <th>Cita</th>
+                            <th>ID Cita</th>
+                            <th>Medico</th>
+                            <th>Horario</th>
+                            <th>Día</th>
+                            <th>Nombre Paciente</th>
+                            <th>Apellido Paciente</th>
                         </tr>
                         </thead>
                         <tbody>
 
-                        {% for cita in cita_list %}
+                        {% for cita in citas %}
                         <tr>
+                            <td>{{ cita.id }}</td>
+                            <td>{{ cita.medico }}</td>
+                            <td>{{ cita.horario }}</td>
                             <td>{{ cita.date }}</td>
+                            <td>{{ cita.nombre }}</td>
+                            <td>{{ cita.apellido }}</td>
                         </tr>
                         {% endfor %}
 

@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .models import Cita
-from .forms import CitaForm
+from .tests import CitaForm
 from .logic.cita_logic import crear_cita, get_citas, get_cita
 
 def cita_list(request):
