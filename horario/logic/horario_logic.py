@@ -12,6 +12,6 @@ def get_horario(var_pk):
 
 def create_horario(form):
     horario = form.save(commit=False)
-    horario.profesional=form.Medico
+    horario.profesional=form.profesional
     horario.save()
     return ()
