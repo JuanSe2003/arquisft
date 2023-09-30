@@ -4,7 +4,7 @@ from medico.models import Medico
 class Horario(models.Model):
     id=models.IntegerField(primary_key=True)
     profesional = models.ForeignKey(Medico, on_delete=models.CASCADE,default=None)
-    time = models.CharField()
+    time = models.CharField(max_length=4)
 
     def __str__(self):
         return f'ID: {self.id}, Time: {self.time}'
