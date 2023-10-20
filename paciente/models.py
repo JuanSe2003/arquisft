@@ -5,7 +5,7 @@ class Paciente(models.Model):
     nombre = models.CharField(max_length=200)
     correo = models.CharField(max_length=200)
     cc = models.IntegerField(default=0)
-    plan_Salud = models.CharField(max_length=200)
+    plan_Salud = models.CharField(max_length=200,default="N/A")
 
     def _str_(self):
         return f'{self.nombre} {self.correo}'
