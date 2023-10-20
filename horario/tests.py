@@ -7,6 +7,7 @@ class HorarioForm(forms.ModelForm):
     class Meta:
         model = Horario
         fields = [
+            'id',
             'profesional',
             'date',
             'hora_inicio',
@@ -14,6 +15,7 @@ class HorarioForm(forms.ModelForm):
             'disponible',
         ]
         labels = {
+            'id': 'Id',
             'profesional': 'Profesional',
             'date': 'Date',
             'hora_inicio': 'Hora_inicio',

@@ -9,10 +9,14 @@ class PacienteForm(forms.ModelForm):
         fields = [
             'id',
             'nombre',
-            'correo'
+            'correo',
+            'cc',
+            'plan_Salud'
         ]
         labels = {
             'id': 'Id',
             'nombre': 'Nombre',
-            'correo': 'Correo'
+            'correo': 'Correo',
+            'cc': 'Cc',
+            'plan_Salud': 'Plan_Salud',
         }
