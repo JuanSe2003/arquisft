@@ -9,10 +9,14 @@ class MedicoForm(forms.ModelForm):
         fields = [
             'id',
             'name',
-            'last_name'
+            'last_name',
+            'especialidad',
+            'consultorio'
         ]
         labels = {
             'id': 'Id',
             'name': 'Name',
-            'last_name': 'Last_name'
+            'last_name': 'Last_name',
+            'especialidad': 'Especialidad',
+            'consultorio': 'Consultorio'
         }

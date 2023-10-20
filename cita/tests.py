@@ -9,15 +9,12 @@ class CitaForm(forms.ModelForm):
             'id',
             'medico',
             'horario',
-            'date',
-            'nombre',
-            'apellido'
+            'paciente'
         ]
         labels = {
             'id':'Id',
             'medico': 'Medico',
             'horario':'Horario',
-            'date': 'Date',
-            'nombre': 'Nombre',
-            'apellido': 'Apellido',
+            'paciente': 'Paciente',
+
         }
