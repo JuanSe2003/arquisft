@@ -10,5 +10,5 @@ def get_Paciente(var_pk):
     return paciente
 
 def get_Pacientes():
-    paciente=Paciente.objects.all()
+    paciente=Paciente.objects.all() 
     return paciente
