@@ -27,7 +27,11 @@
                         <tr style="color:#0E2EB0">
                             <th>ID horario</th>
                             <th>Medico</th>
-                            <th>Hora</th>
+                            <th>Especialidad</th>
+                            <th>Día</th>
+                            <th>Hora Inicio</th>
+                            <th>Hora Fin</th>
+                            <th>Disponible</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -36,7 +40,11 @@
                         <tr>
                             <td>{{ horario.id }}</td>
                             <td>{{ horario.profesional.name}}</td>
-                            <td>{{ horario.hora}}</td>
+                            <td>{{ horario.profesional.especialidad}}</td>
+                            <td>{{ horario.date}}</td>
+                            <td>{{ horario.hora_inicio}}</td>
+                            <td>{{ horario.hora_fin}}</td>
+                            <td>{{ horario.disponible}}</td>
                         </tr>
                         {% endfor %}
 

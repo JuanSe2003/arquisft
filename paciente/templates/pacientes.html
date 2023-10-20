@@ -4,10 +4,10 @@
 <div class="content">
     <div class="">
         <div class="page-header-title">
-            <h4 class="page-title">Citas</h4>
+            <h4 class="page-title">Pacientes</h4>
             <div style="text-align:right;">
                 <button type="button" class="btn btn-success waves-effect waves-light"
-                        onClick=" window.location.href='/citacreate' " style="text-align:center;">+
+                        onClick=" window.location.href='/pacientecreate' " style="text-align:center;">+
                 </button>
             </div>
         </div>
@@ -25,29 +25,22 @@
                     <table class="table table-hover">
                         <thead>
                         <tr style="color:#0E2EB0">
-                            <th>ID Cita</th>
-                            <th>Medico Asignado</th>
-                            <th>Especialidad</th>
-                            <th>Dia</th>
-                            <th>Fecha inicio</th>
-                            <th>Fecha fin</th>
-                            <th>Nombre Paciente</th>
-                            <th>Cédula Paciente</th>
+                            <th>Paciente ID</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Cédula de Ciudadania</th>
+                            <th>Plan de salud</th>
                         </tr>
                         </thead>
                         <tbody>
 
-                        {% for cita in citas %}
+                        {% for paciente in pacientes %}
                         <tr>
-                            <td>{{ cita.id }}</td>
-                            <td>{{ cita.medico.name }}</td>
-                            <td>{{ cita.medico.especialidad }}</td>
-                            <td>{{ cita.horario.date }}</td>
-                            <td>{{ cita.horario.hora_inicio }}</td>
-                            <td>{{ cita.horario.hora_fin }}</td>
-                            <td>{{ cita.paciente.nombre }}</td>
-                            <td>{{ cita.paciente.cc }}</td>
-
+                            <td>{{ paciente.id }}</td>
+                            <td>{{ paciente.nombre }}</td>
+                            <td>{{ paciente.correo }}</td>
+                            <td>{{ paciente.cc }}</td>
+                            <td>{{ paciente.plan_Salud }}</td>
                         </tr>
                         {% endfor %}
 
