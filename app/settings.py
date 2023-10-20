@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'cita',
     'horario',
     'medico',
-    #'paciente',
+    'paciente',
 
 ]
 
