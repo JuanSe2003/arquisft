@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'medico',
     'horario',
     'cita',
-
+    'social_django',
 ]
 
 MIDDLEWARE = [
