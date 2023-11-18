@@ -1,3 +1,5 @@
+from  app.auth0backend import getRole
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -7,21 +9,25 @@ from .tests import PacienteForm
 from .logic.paciente_logic import create_Paciente,get_Paciente,get_Pacientes
 
 def paciente_create(request):
-    if request.method == 'POST':
-        form = PacienteForm(request.POST)
-        if form.is_valid():
-            create_Paciente(form)
-            messages.add_message(request, messages.SUCCESS, 'Successfully created paciente')
-            return HttpResponseRedirect(reverse('pacienteCreate'))
+    role=getRole(request)
+    if role =="Empleado CallCenter":
+        if request.method == 'POST':
+            form = PacienteForm(request.POST)
+            if form.is_valid():
+                create_Paciente(form)
+                messages.add_message(request, messages.SUCCESS, 'Successfully created paciente')
+                return HttpResponseRedirect(reverse('pacienteCreate'))
+            else:
+                print(form.errors)
         else:
-            print(form.errors)
+            form = PacienteForm()
+    
+        context = {
+            'form': form,
+        }
+        return render(request, 'pacienteCreate.html', context)
     else:
-        form = PacienteForm()
-
-    context = {
-        'form': form,
-    }
-    return render(request, 'pacienteCreate.html', context)
+        return HttpResponse("Usuario no autorizado")
 
 def paciente_list(request):
     pacientes = get_Pacientes()
