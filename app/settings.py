@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'medico',
     'horario',
     'cita',
-
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'monitoring_db3',
+        'NAME': 'monitoring_db',
         'USER': 'monitoring_user',
         'PASSWORD': 'isis2503',
-        'HOST': '10.128.0.6',
+        'HOST': '10.128.0.2',
         'PORT': '5432',
     }
 }
@@ -136,4 +136,13 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'static', 'media')
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
-
+LOGIN_URL = "/login/auth0"
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "https://rasiedicalinnovatech.us.auth0.com/v2/logout?returnTo=http%3A%2F%2F35.188.38.118:8080"
+SOCIAL_AUTH_TRAILING_SLASH = False
+ # Remove end slash from routes
+SOCIAL_AUTH_AUTH0_DOMAIN = 'rasiedicalinnovatech.us.auth0.com'
+SOCIAL_AUTH_AUTH0_KEY = '2PwJAJTA7YVwv7M6xcjl0l64UkhvWidk'
+SOCIAL_AUTH_AUTH0_SECRET = '5WD2glAMcET1KnzRKknUp6cg3wAM5PNHQl1ljNAgUlLC3TM5MEWwrcmQ_koFdOp9'
+SOCIAL_AUTH_AUTH0_SCOPE = [ 'openid', 'profile','email','role', ]
+AUTHENTICATION_BACKENDS = { 'app.auth0backend.Auth0', 'django.contrib.auth.backends.ModelBackend', }
