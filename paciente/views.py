@@ -30,9 +30,13 @@ def paciente_create(request):
         return HttpResponse("Usuario no autorizado")
 
 def paciente_list(request):
-    pacientes = get_Pacientes()
-    context = {'pacientes':pacientes}
-    return render(request, 'pacientes.html', context)
+    role = getRole(request)
+    if role == "Dios":
+        pacientes = get_Pacientes()
+        context = {'pacientes':pacientes}
+        return render(request, 'pacientes.html', context)
+    else:
+        return HttpResponse("Usuario no autorizado")
 
 #¿?
 def get_paciente(request):

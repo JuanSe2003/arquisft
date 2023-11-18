@@ -10,16 +10,11 @@ from .logic.medico_logic import crear_medico, get_medico, get_medicos
 from  app.auth0backend import getRole
 
 
-@login_required 
+@login_required
 def medico_list(request):
-        role=getRole(request)
-        if role =="supervisor":
-                medicos = get_medicos()
-                context = {'medicos':medicos}
-                return render(request, 'medicos.html', context)
-        else:
-                return HttpResponse("Usuario no autorizado")
-
+        medicos = get_medicos()
+        context = {'medicos':medicos}
+        return render(request, 'medicos.html', context)
 
 
 def medico_create(request):
